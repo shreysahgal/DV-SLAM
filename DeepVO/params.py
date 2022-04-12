@@ -4,8 +4,7 @@ class Parameters():
 	def __init__(self):
 		self.n_processors = 8
 		# Path
-		# self.data_dir =  '/nfs/nas12.ethz.ch/fs1201/infk_ivc_students/cvg-students/chsiao/KITTI/'
-		self.data_dir = '/home/ymjian/DeepVO-pytorch/KITTI'
+		self.data_dir =  '/home/yclai/Desktop/DeepVO/DeepVO-pytorch/KITTI'
 		self.image_dir = self.data_dir + '/images/'
 		self.pose_dir = self.data_dir + '/pose_GT/'
 		
@@ -57,8 +56,6 @@ class Parameters():
 		self.resume_t_or_v = '.train'
 		self.load_model_path = 'models/t{}_v{}_im{}x{}_s{}x{}_b{}_rnn{}_{}.model{}'.format(''.join(self.train_video), ''.join(self.valid_video), self.img_h, self.img_w, self.seq_len[0], self.seq_len[1], self.batch_size, self.rnn_hidden_size, '_'.join([k+str(v) for k, v in self.optim.items()]), self.resume_t_or_v)
 		self.load_optimizer_path = 'models/t{}_v{}_im{}x{}_s{}x{}_b{}_rnn{}_{}.optimizer{}'.format(''.join(self.train_video), ''.join(self.valid_video), self.img_h, self.img_w, self.seq_len[0], self.seq_len[1], self.batch_size, self.rnn_hidden_size, '_'.join([k+str(v) for k, v in self.optim.items()]), self.resume_t_or_v)
-		# self.load_model_path = '/home/ymjian/DeepVO-pytorch/pretrained.model.train'
-		# self.load_optimizer_path = '/home/ymjian/DeepVO-pytorch/pretrained.optimizer.train'
 
 		self.record_path = 'records/t{}_v{}_im{}x{}_s{}x{}_b{}_rnn{}_{}.txt'.format(''.join(self.train_video), ''.join(self.valid_video), self.img_h, self.img_w, self.seq_len[0], self.seq_len[1], self.batch_size, self.rnn_hidden_size, '_'.join([k+str(v) for k, v in self.optim.items()]))
 		self.save_model_path = 'models/t{}_v{}_im{}x{}_s{}x{}_b{}_rnn{}_{}.model'.format(''.join(self.train_video), ''.join(self.valid_video), self.img_h, self.img_w, self.seq_len[0], self.seq_len[1], self.batch_size, self.rnn_hidden_size, '_'.join([k+str(v) for k, v in self.optim.items()]))

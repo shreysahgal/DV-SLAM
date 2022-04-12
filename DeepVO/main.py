@@ -48,8 +48,7 @@ print('='*50)
 
 # Model
 M_deepvo = DeepVO(par.img_h, par.img_w, par.batch_norm)
-use_cuda = False #torch.cuda.is_available()
-print('cuda: ', use_cuda)
+use_cuda = torch.cuda.is_available()
 if use_cuda:
     print('CUDA used.')
     M_deepvo = M_deepvo.cuda()
@@ -82,8 +81,6 @@ elif par.optim['opt'] == 'Cosine':
 
 # Load trained DeepVO model and optimizer
 if par.resume:
-	# print('model path: ', par.load_model_path)
-	# print('optim path: ', par.load_optimizer_path)
 	M_deepvo.load_state_dict(torch.load(par.load_model_path))
 	optimizer.load_state_dict(torch.load(par.load_optimizer_path))
 	print('Load model from: ', par.load_model_path)

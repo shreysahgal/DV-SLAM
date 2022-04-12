@@ -12,7 +12,8 @@ from torch.utils.data import DataLoader
 from helper import eulerAnglesToRotationMatrix
 
 if __name__ == '__main__':    
-
+	# torch.cuda.empty_cache()
+	# torch.cuda.memory_summary(device=None, abbreviated=False)
 	videos_to_test = ['04', '05', '07', '10', '09']
 
 	# Path
@@ -24,7 +25,8 @@ if __name__ == '__main__':
 
 	# Load model
 	M_deepvo = DeepVO(par.img_h, par.img_w, par.batch_norm)
-	use_cuda = False #torch.cuda.is_available()
+	# use_cuda = torch.cuda.is_available()
+	use_cuda = False
 	if use_cuda:
 		M_deepvo = M_deepvo.cuda()
 		M_deepvo.load_state_dict(torch.load(load_model_path))
