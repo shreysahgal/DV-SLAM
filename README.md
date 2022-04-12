@@ -4,7 +4,7 @@ rob 530 final project group 9
 ## Results
 ![alt text](https://github.com/shreysahgal/DV-SLAM/blob/main/media/res1.JPG)
 
-The results show a substantial improvement with loop closures when compared to pure Deep VO output. These results are from running our program on KITTI rgb odometry dataset 07. To replicate them ...
+The results show a substantial improvement with loop closures when compared to pure Deep VO output. These results are from running our program on KITTI rgb odometry dataset 07. To replicate them follow the "Running the code" section below.
 
 Obtained Results             |  ORB-SLAM Comparison
 :-------------------------:|:-------------------------:
