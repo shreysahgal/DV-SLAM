@@ -1,2 +1,1 @@
-# rob530finalproject
-rob 530 final project group 9
+# ROB 530 Final Project Group 9: DV SLAM
