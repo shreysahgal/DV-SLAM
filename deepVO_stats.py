@@ -90,19 +90,19 @@ def align(model,data):
 if __name__ == '__main__':
 
   #Path to the times.txt in KITTI dataset
-	ground_time = np.loadtxt('times7.txt')
+	ground_time = np.loadtxt('07_results/times7.txt')
 	
   
   #Path to the KeyFrameTrajectory.txt file
-	res_time = np.loadtxt('Results.txt')
+	res_time = np.loadtxt('07_results/Results.txt')
     
   #Path to the ground truth file
-	ground_data = np.loadtxt('07.txt')
+	ground_data = np.loadtxt('07_results/07.txt')
 	data= gen_data(ground_time, res_time, ground_data)
 	print(np.shape(res_time))
 	ground_points = np.asarray(get_coo(data))
 
-	testly  = np.loadtxt('gtsam7.txt')
+	testly  = np.loadtxt('07_results/gtsam7.txt')
 	te = np.zeros((np.shape(testly)), float)
 	for i in range(len(te)):
 		te[i] = [testly[i][0],testly[i][1],testly[i][2],testly[i][9],testly[i][3],testly[i][4],testly[i][5],testly[i][10],testly[i][6],testly[i][7],testly[i][8],testly[i][11]]
