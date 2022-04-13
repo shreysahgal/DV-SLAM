@@ -28,10 +28,11 @@ In order to configure this project, please follow these steps:
 ```
 $ git clone https://github.com/shreysahgal/DV-SLAM.git
 ```
-2. fill in
+2. Fill in
 '''
 fill in
-'''
+''' 
+3. Run main_DV.py
 
 
 ## References
