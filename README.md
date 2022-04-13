@@ -34,6 +34,15 @@ fill in
 ''' 
 3. Run main_DV.py
 
+### Requirements
+* Python 3.8.10
+* Numpy 1.22.3
+* OpenCV 4.5.5
+* Gtsam 4.1.1
+* Matplotlib 3.4.3
+* Tqdm 4.64.0
+* Scipy 1.8.0
+
 
 ## References
 <a id="1">[1]</a> 
