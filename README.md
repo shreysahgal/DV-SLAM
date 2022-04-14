@@ -7,7 +7,7 @@ This repository holds all the code for our NAVARCH/EECS 568, ROB530: Mobile Robo
 The main idea of our project is to enhance the performance of the visual odometry (VO) part in ORB-SLAM2 [[2]](#2) by a deep learning method. We plan to maintain the back-end structure of ORB-SLAM2 [[2]](#2) and only modify the visual odometry part of the front-end side. We use the monocular camera information from the KITTI dataset as the input data and replaced the VO algorithm with a pre-trained end-to-end DL-based model called DeepVO [[4]](#4).
 
 
-### Running the code
+## Running the code
 
 In order to configure this project, please follow these steps:
 
@@ -15,7 +15,32 @@ In order to configure this project, please follow these steps:
 ```
 $ git clone https://github.com/shreysahgal/DV-SLAM.git
 ```
-#### ORB-SLAM2
+### DeepVO
+We implement DeepVO by modifying this repository [DeepVO-pytorch](https://github.com/ChiWeiHsiao/DeepVO-pytorch), using a [pre-trained model](https://drive.google.com/file/d/1l0s3rYWgN8bL0Fyofee8IhN-0knxJF22/view) and [optimizer](https://drive.google.com/file/d/1JlVJwEZy4W4EmgtTCNWmM4YAACUHxnr2/view) provided by [alexart13](https://github.com/alexart13).
+
+#### Preresuisites
+* pytorch 0.4.0
+* torchvision 0.2.1
+* numpy
+* pandas
+* pillow
+* matplotlib
+* glob
+
+Put the pre-trained model and optimizer into the `models` folder.
+
+
+### ORB-SLAM2
+The [ORB-SLAM2 repository](https://github.com/ymjian41/ORB_SLAM2/tree/f30efe98edb251d7e4e4bdfc7e11c3732416f6e6) is forked from [ORB-SLAM2](https://github.com/raulmur/ORB_SLAM2). We modified the Monocular example with [KITTI Dataset](http://www.cvlibs.net/datasets/kitti/eval_odometry.php) of ORB-SLAM2 using DeepVO's as visual odometry.
+#### Preresuisites
+* C++11
+* Pangolin
+* OpenCV 2.0.4
+* Eigen3
+* DBoW2 and g2o
+```
+$ ./Examples/Monocular/mono_kitti Vocabulary/ORBvoc.txt Examples/Monocular/KITTIX.yaml PATH_TO_DATASET_FOLDER/dataset/sequences/SEQUENCE_NUMBER
+```
 
 '''
 fill in
