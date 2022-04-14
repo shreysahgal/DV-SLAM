@@ -44,9 +44,7 @@ The [ORB-SLAM2 repository](https://github.com/ymjian41/ORB_SLAM2/tree/f30efe98ed
 $ ./Examples/Monocular/mono_kitti Vocabulary/ORBvoc.txt Examples/Monocular/KITTIX.yaml PATH_TO_DATASET_FOLDER/dataset/sequences/SEQUENCE_NUMBER
 ```
 
-'''
-fill in
-''' 
+
 3. Run main_DV.py
 
 ### Requirements
