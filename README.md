@@ -27,7 +27,9 @@ We implement DeepVO by modifying this repository [DeepVO-pytorch](https://github
 * matplotlib
 * glob
 
-Put the pre-trained model and optimizer into the `models` folder.
+1. Put the pre-trained model and optimizer into the `models` folder. 
+2. Change `self.data_dir` in `params.py` to your own data path.
+3. Run `test.py` to get the visual odometry output from the model.
 
 
 ### ORB-SLAM2
