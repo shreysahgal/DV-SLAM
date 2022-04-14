@@ -45,9 +45,13 @@ $ ./Examples/Monocular/mono_kitti Vocabulary/ORBvoc.txt Examples/Monocular/KITTI
 ```
 
 
-3. Run main_DV.py
+### Loop-Closure
+Run main_DV.py
+```
+$ main_DV.py
+```
 
-### Requirements
+#### Requirements
 * Python 3.8.10
 * Numpy 1.22.3
 * OpenCV 4.5.5
