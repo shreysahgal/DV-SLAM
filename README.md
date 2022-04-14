@@ -58,6 +58,11 @@ fill in
 * Tqdm 4.64.0
 * Scipy 1.8.0
 
+### Results of DeepVO+ORB_SLAM2
+[Testing on KITTI Dataset 07 with scaled odometry (Lost halfway)](https://youtu.be/54L64CKaHNs)
+[Testing on KITTI Dataset 04 with scaled odometry (success)](https://youtu.be/wDi7qlqMG9w)
+[Testing on KITTI Dataset 04 with unscaled odometry (Lost at the beginning)](https://youtu.be/0kvVNDkSwRs)
+
 ## Results
 ![alt text](https://github.com/shreysahgal/DV-SLAM/blob/main/media/res1.JPG)
 
