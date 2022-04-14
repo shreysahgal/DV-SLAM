@@ -1,10 +1,10 @@
 # DV-SLAM
 ROB 530 Final Project Group 9: DV SLAM
 
-This repository holds all the code for our NAVARCH/EECS 568, ROB530: Mobile Robotics final project. The title of our project is DV-SLAM. Team members are: Joshua Friesen, Shanzhao Wang, Shrey Sahgal, Yi-Cheng Lai, Yu-Min Jian (listed in alphabetical order)
+This repository holds all the code for our NAVARCH/EECS 568, ROB530: Mobile Robotics final project. The title of our project is DV-SLAM. Team members are: Joshua Friesen, Yu-Min Jian, Yi-Cheng Lai, Shrey Sahgal, Shanzhao Wang (listed in alphabetical order).
 
 ## Main Idea and Objective
-The main idea of our project is to enhance the performance of the visual odometry (VO) part in ORB-SLAM2 [[2]](#2) by a deep learning method. We plan to maintain the back-end structure of ORB-SLAM2 [[2]](#2) and only modify the visual odometry part of the front-end side. We use the monocular camera information from the KITTI dataset as the input data and replaced the VO algorithm with a pre-trained end-to-end DL-based model called DeepVO [[4]](#4).
+The objective of our project is to enhance the performance of existing visual odometry (VO) SLAM techniques by replacing the front-end with a deep learning method. In this repository we have created a type of SLAM called DV-SLAM that takes the loop-closure aspects of graph SLAM and implements the afformentioned deep-learning front end. Additionally we have included the code for our future-work, ORB-SLAM2 [[2]](#2) with a modified front end visual odometry. For our models we use the monocular camera information from the KITTI dataset as the input data and replaced the VO algorithm with a pre-trained end-to-end DL-based model called DeepVO [[4]](#4).
 
 
 ## Running the code
@@ -18,7 +18,7 @@ $ git clone https://github.com/shreysahgal/DV-SLAM.git
 ### DeepVO
 We implement DeepVO by modifying this repository [DeepVO-pytorch](https://github.com/ChiWeiHsiao/DeepVO-pytorch), using a [pre-trained model](https://drive.google.com/file/d/1l0s3rYWgN8bL0Fyofee8IhN-0knxJF22/view) and [optimizer](https://drive.google.com/file/d/1JlVJwEZy4W4EmgtTCNWmM4YAACUHxnr2/view) provided by [alexart13](https://github.com/alexart13).
 
-#### Preresuisites
+#### Prerequisites
 * pytorch 0.4.0
 * torchvision 0.2.1
 * numpy
