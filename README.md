@@ -45,8 +45,9 @@ $ ./Examples/Monocular/mono_kitti Vocabulary/ORBvoc.txt Examples/Monocular/KITTI
 ```
 
 
-### Loop-Closure
-Run main_DV.py
+### DV SLAM
+1. Fill in 'fill in' part in `main_DV.py`
+2. Run `main_DV.py` to get the result from DV SLAM using gtsam solver
 ```
 $ main_DV.py
 ```
